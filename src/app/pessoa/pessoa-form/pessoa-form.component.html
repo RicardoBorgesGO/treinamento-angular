@@ -1,0 +1,26 @@
+<p>pessoa-form works!</p>
+
+<form #cadastro="ngForm" (ngSubmit)="save()">
+    Nome:<br>
+    <input type="text" #nome="ngModel" name="nome" [(ngModel)]="pessoa.nome" required>
+    <div style="color: crimson;" [hidden]="nome.valid || nome.pristine">
+        Campo obrigatório
+    </div>
+    <br>
+    Telefone:<br>
+    <input type="text" name="lastname" [(ngModel)]="pessoa.telefone">
+    <br><br>
+    <input type="submit" value="Salvar">
+</form>
+
+<p>
+    <strong>Nome:</strong> {{pessoa.nome}}
+</p>
+
+<p>
+    <strong>Telefone:</strong> {{pessoa.telefone}}
+</p>
+
+<p>
+    <strong>Objeto:</strong> {{pessoa | json}}
+</p>

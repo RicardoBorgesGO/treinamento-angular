@@ -1,0 +1,17 @@
+<p>Listagem de pessoas funcionou!</p>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Salário</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pessoa of pessoas">
+            <td>{{pessoa.id}}</td>
+            <td>{{pessoa.employee_name}}</td>
+            <td>{{pessoa.employee_salary}}</td>
+        </tr>
+    </tbody>
+</table>
